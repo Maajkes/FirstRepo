@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table>
+   <tr>
+      <td colspan="3" >Majkowski</td>
+   </tr>
+   <tr>
+    <td><button id="FirstButton" onclick="Liczb()">Liczby</button></td>
+    <td><button id="SecondButton" onclick="alert(Fib(5))" >Fibo</button></td>
+
+   </tr>
+</table>
+
+<script>
+    function Liczb(){
+        alert(Math.floor(Math.random()*100))
+    }
+
+    function Fib(n){
+        if(n==0){
+        return 0;
+    }
+    else if (n==1){
+    return 1;
+    }
+    else{
+    return fib(n-1)+fib(n-2);
+    }
+}
+
+</script>
+    
+</body>
+</html>
