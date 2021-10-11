@@ -1,0 +1,60 @@
+<html> 
+<head> 
+<title>
+  
+</title>
+  <script language="JavaScript">
+function V(D,x)
+{
+    D_liczba=parseFloat(D)
+    x_liczba=parseFloat(x)
+
+    c_liczba = Math.pow(D,2) + Math.pow(x,2)
+    V_wynik = Math.sqrt(c_liczba)
+
+    document.getElementsByName('Drabina')[0].value=V_wynik.toFixed(2);   
+ }
+function Pc(D,x)
+{
+    D_liczba=parseFloat(D)
+    x_liczba=parseFloat(x)
+
+   Pc_wynik=((Math.atan2(D_liczba,x_liczba))/Math.PI)*180
+
+   document.getElementsByName('Alfa')[0].value=Pc_wynik.toFixed(2);
+   
+}
+    </script>
+</head> 
+<body> 
+ 
+<br> <br>
+
+<form name="formularz" action="..." onsubmit="V(this.D.value,this.x.value); Pc(this.D.value,this.x.value);return false"> 
+
+ Wysokość oparcia=
+<input  size="6"  name="D">
+
+Odległość oparcia=
+<input  size="6"  name="x">
+
+<br>
+<br>
+<input  TYPE="submit"  Value="licz" >
+<br>
+<br>
+
+ Drabina=
+<input  size="6"  name="Drabina">
+
+ Alfa=
+<input  size="6"  name="Alfa">
+
+</form>
+<table>
+<tr id="p1"></tr>
+<tr id="p2"></tr>
+</table>
+
+</body> 
+</html>
