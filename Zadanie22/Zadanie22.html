@@ -1,0 +1,49 @@
+<html> 
+<head> 
+  <script language="JavaScript">
+function V(odl_MAJ,l_MAJ)
+{
+    dystans=parseFloat(odl_MAJ)
+    lot=parseFloat(l_MAJ)
+
+    wysokosc=Math.abs(Math.sqrt(Math.pow(lot, 2)-Math.pow(dystans, 2)))
+
+    document.getElementsByName('wys')[0].value=wysokosc.toFixed(2);   
+ }
+function Pc(odl_MAJ,l_MAJ)
+{ 
+    dystans=parseFloat(odl_MAJ)
+    lot=parseFloat(l_MAJ)
+
+    wysokosc=Math.sqrt(Math.pow(lot,2)-Math.pow(dystans,2))
+   katstartu=((Math.atan2(dystans,wysokosc))/Math.PI)*180 
+
+   document.getElementsByName('kat')[0].value=katstartu.toFixed(2); 
+}
+ </script>
+</head> 
+<body> 
+
+<br> <br>
+<form name="formularz" action="..." onsubmit="V(this.odleglosc.value,this.lot.value); Pc(this.odleglosc.value,this.lot.value);return false"> 
+
+ Dystans =
+<input  size="6"  name="odleglosc">
+
+ Długosc lotu =
+<input  size="6"  name="lot">
+<br>
+<br>
+
+<input  TYPE="submit"  Value="licz" >
+
+<br>
+<br>
+
+ Wysokość = 
+<input  size="6"  name="wys">
+ Kąt =
+<input  size="6"  name="kat">
+</form>
+</body> 
+</html>
