@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Czolgi i Koty</title>
+    <script>
+    function czolg(marka,rok,kolor,wlasciciel,kraj) 
+    {
+    this.marka=marka;
+    this.rok=rok;
+    this.kolor=kolor;
+    this.wlasciciel=wlasciciel;
+    this.kraj=kraj;
+
+    fura= showczolg("Super",2021,"Szary", "Hans", "Niemcy");
+    document.write("Marka: "+ fura.marka +" rocznik: "+ fura.rok +" cena: "+ fura.kolor +" wlasciciel: "+ fura.wlasciciel +"Kraj: "+fura.kraj);   
+}
+
+    
+
+    function kot(rasa,rok,kolor,wlasciciel,kraj) 
+    {
+    this.rasa=rasa;
+    this.rok=rok;
+    this.kolor=kolor;
+    this.wlasciciel=wlasciciel;
+    this.kraj=kraj;
+
+    fura= showkot("Jakas",2020,"Czarny", "Hans", "Niemcy");
+    document.write("Rasa: "+ fura.rasa +" rocznik: "+ fura.rok +" cena: "+ fura.kolor +" wlasciciel: "+ fura.wlasciciel +"Kraj: "+fura.kraj);   
+}
+
+
+</script>
+</head>
+<body>
+
+    <input type="button" onclick="showczolg()" value="Czolg">
+    <input type="button" onclick="showkot()" value="Kot">
+    
+</body>
+</html>
