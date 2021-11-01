@@ -1,0 +1,54 @@
+<head>
+    <script type="text/javascript">
+
+        function czolg(rok, wlasciciel, kolor) {
+            this.rok = rok;
+            this.wlasciciel = wlasciciel;
+            this.kolor = kolor;
+        }
+
+        function kot(rasa, wiek, kolor) {
+            this.rasa = rasa;
+            this.wiek = wiek;
+            this.kolor = kolor;
+        }
+
+        kot1 = new kot("Norweski", 1, "brazowy");
+        kot2 = new kot("Sfinks", 3, "rozowy");
+        kot3 = new kot("Bengalski", 1, "brazowe plamy");
+        kot4 = new kot("Maine Coon", 2, "bialy");
+        kot5 = new kot("Perski", 2, "bialy");
+
+        czolg1 = new czolg(1911, "Ruska", "czarnego");
+        czolg2 = new czolg(1922, "Niemca", "moro");
+        czolg3 = new czolg(1933, "Szweda", "szarego");
+        czolg4 = new czolg(1944, "Ruska", "czarnego");
+        czolg5 = new czolg(1955, "Niemca", "brazowego");
+
+        function showczolg() {
+            
+            document.write("Czolg1: <br>Nalezy do :" + czolg1.wlasciciel + ", z roku: " + czolg1.rok + ", koloru: " + czolg1.kolor + "<br>");
+            document.write("Czolg2: <br>Nalezy do :" + czolg2.wlasciciel + ", z roku: " + czolg2.rok + ", koloru: " + czolg2.kolor + "<br>");
+            document.write("Czolg3: <br>Nalezy do :" + czolg3.wlasciciel + ", z roku: " + czolg3.rok + ", koloru: " + czolg3.kolor + "<br>");
+            document.write("Czolg4: <br>Nalezy do :" + czolg4.wlasciciel + ", z roku: " + czolg4.rok + ", koloru: " + czolg4.kolor + "<br>");
+            document.write("Czolg5: <br>Nalezy do :" + czolg5.wlasciciel + ", z roku: " + czolg5.rok + ", koloru: " + czolg5.kolor + "<br>");
+        }
+
+        function showkot() {
+
+            document.write("Kot1 z rasy jest: " + kot1.rasa + ", w wieku " + kot1.wiek + " rok, i ma " + kot1.kolor + " kolor<br>");
+            document.write("Kot2 z rasy jest: " + kot2.rasa + ", w wieku " + kot2.wiek + " lata, i ma " + kot2.kolor + " kolor<br>");
+            document.write("Kot3 z rasy jest: " + kot3.rasa + ", w wieku " + kot3.wiek + " rok, i ma " + kot3.kolor + " kolor<br>");
+            document.write("Kot4 z rasy jest: " + kot4.rasa + ", w wieku " + kot4.wiek + " lata, i ma " + kot4.kolor + " kolor<br>");
+            document.write("Kot5 z rasy jest: " + kot5.rasa + ", w wieku " + kot5.wiek + " lata, i ma " + kot5.kolor + " kolor<br>");
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="czolgi" onclick="showczolg()">
+    <input type="button" value="koty" onclick="showkot()">
+
+</body>
