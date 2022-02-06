@@ -1,36 +1,26 @@
-<!DOCTYPE html>
-    <head>
-        <title>Odliczanie czasu-zegar</title>
-        <meta charset="UTF-8">
-        <script type="text/javascript">
-		
-		function odliczanie()
-		{
-            var dzisiaj = new Date();
-			
-			var dzien = dzisiaj.getDate();
-			if (dzien<10)dzien = "0"+dzien;
-			var miesiac = dzisiaj.getMonth() + 1;
-  			if (miesiac < 10)miesiac = "0" + miesiac;
-            var rok = dzisiaj.getFullYear();
-			
-			var godzina = dzisiaj.getHours();
-			if (godzina<10)godzina = "0"+godzina;
-			var minuta = dzisiaj.getMinutes();
-			if (minuta<10)minuta = "0"+minuta;
-			var sekunda = dzisiaj.getSeconds();
-			if (sekunda<10)sekunda = "0"+sekunda;
-			
-			document.getElementById("zegar").innerHTML = 
-		    dzien+"/"+miesiac+"/"+rok+" | "+godzina+":"+minuta+":"+sekunda;
-			
-			setTimeout("odliczanie()",1000);
-		}			
-        </script>		
-		
-
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+<head>
+<script type="text/javascript">
+function wyswietlDate(){
+    var Today = new Date();
+    var Month = (Today.getMonth()+1);
+    var Day = Today.getDate();
+    var Year = Today.getFullYear();
+       if(Year <= 99)    Year += 1900
+    return  Day + "-" + Month + "-" + Year;
+}
+function wywolaj()
+{
+	document.write("Tomasz Majkowski ");
+    document.write("dzisiejsza data : " + wyswietlDate()+"<br>");
+}
+</script>
 </head>
-    <body onload="odliczanie();"> 
-        <div id="zegar"></div>        		
-    </body>
+<body>
+	<script type="text/javascript">
+		document.write(wywolaj());
+	</script>
+</body>
 </html>
